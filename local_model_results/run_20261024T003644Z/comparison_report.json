@@ -1,0 +1,36 @@
+{
+  "ehr": {
+    "status": "success",
+    "test_metrics": {
+      "accuracy": 0.9711551795867425,
+      "precision": 0.9385245901639344,
+      "recall": 0.720125786163522,
+      "f1": 0.8149466192170819,
+      "roc_auc": 0.9791235024033287,
+      "confusion_matrix": {
+        "tn": 13090,
+        "fp": 60,
+        "fn": 356,
+        "tp": 916
+      }
+    },
+    "error": null
+  },
+  "pima": {
+    "status": "success",
+    "test_metrics": {
+      "accuracy": 0.7068965517241379,
+      "precision": 0.5573770491803278,
+      "recall": 0.8292682926829268,
+      "f1": 0.6666666666666666,
+      "roc_auc": 0.8338211382113822,
+      "confusion_matrix": {
+        "tn": 48,
+        "fp": 27,
+        "fn": 7,
+        "tp": 34
+      }
+    },
+    "error": null
+  }
+}

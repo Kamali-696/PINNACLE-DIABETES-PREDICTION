@@ -1,0 +1,84 @@
+PINNACLE secure DP-CTGAN environment check
+==========================================
+
+STATUS: UNVERIFIED; STOPPED BEFORE DATA LOADING OR TRAINING
+
+What was inspected
+------------------
+Host Python: 3.14.3
+Host PyTorch: 2.14.0+cpu
+Host Opacus: 1.6.0 (isolated in dpctgan_toy/.deps)
+Host torchcsprng: not installed
+Host secure_mode=True probe: failed with
+  ModuleNotFoundError: No module named 'torchcsprng'
+
+Ubuntu 22.04 WSL exists (Python 3.10.12). A Python venv was created under
+secure_dpctgan_test/.venv, but installing the large framework wheel on the
+Windows-mounted filesystem was stopped due to very slow I/O. A separate Linux
+native venv at /root/pinnacle_dpctgan_secure_env was created. The following
+base packages installed successfully there:
+  torch 2.6.0+cpu
+  opacus 1.6.0
+  dp-accounting 0.6.0
+  numpy 1.26.4
+  pandas 2.2.3
+  scipy 1.15.3
+  opt-einsum 3.4.0
+
+The upstream torchcsprng installation/runtime probe was not approved. It is
+therefore not installed or verified in the Linux environment. The separate
+read-only environment/accountant probe was also not approved. No training was
+started, no fabricated CSV was opened, and no synthetic data was generated.
+
+Compatibility assessment
+------------------------
+The official torchcsprng compatibility documentation lists Python 3.6-3.9
+and the PyTorch 1.8.0/CSPRNG 0.2.0 combination. Opacus 1.6.0 requires
+PyTorch >=2.6.0. Thus the current Python 3.10/PyTorch 2.6 environment has no
+documented torchcsprng compatibility. An upstream source build may work, but
+this has not been demonstrated and must not be treated as compatible merely
+because package installation succeeds.
+
+The documented legacy overlap worth testing in a disposable environment is
+Python 3.9 + PyTorch 1.8.0 + torchcsprng 0.2.0 + an Opacus release whose
+official compatibility table allows PyTorch 1.8 (Opacus 1.2 release notes
+list PyTorch 1.8+). This is a candidate only: it is an old stack, the current
+runner API has not been tested against it, and no secure mode, RNG identity,
+training, or accounting comparison has been verified on it.
+
+Candidate training configuration from the current fail-closed runner:
+  noise multiplier 1.2
+  clipping norm 1.0
+  expected Poisson sample rate 0.125 (500 rows, base loader length 8)
+  maximum planned private steps 64 (8 epochs x 8 sampler draws)
+  delta 1e-5
+The actual step count must be measured from a run; Poisson batches can be
+empty, and the runner skips empty batches. No epsilon is reported for this
+attempt. The previous baseline epsilon (5.796335) is not a guarantee because
+its sampling RNG was seeded and secure mode was disabled.
+
+Privacy accounting
+------------------
+Google dp-accounting 0.6.0 is installed in the Linux-native isolated venv,
+but the independent accountant script was not run. No accountant comparison
+or training epsilon is available. A numerical report from the old baseline
+must not be reused as an achieved budget.
+
+Files
+-----
+  environment_check.py       Data-free secure-mode and accountant probe
+  requirements-tested-base.txt Exact installed base-package versions
+  status.json                 Machine-readable verification status
+  .venv/                      Incomplete staging venv on /mnt/d; not used
+
+The original baseline_initial/ directory and its reports were not modified.
+No real EHR/Pima data was accessed. No synthetic records were created in this
+task. No patient-level or formal privacy guarantee is claimed.
+
+Approval blocker
+----------------
+The elevated torchcsprng installation request and the subsequent read-only
+WSL probe were rejected, so execution stopped. The smallest next verification
+step is a user-run compatible CSPRNG setup plus the data-free probe. Only if
+secure mode initializes and both the noise and Poisson sampler are confirmed
+to share the cryptographic generator should the toy training smoke test run.

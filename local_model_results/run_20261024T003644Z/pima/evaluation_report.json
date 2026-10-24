@@ -1,0 +1,127 @@
+{
+  "dataset": "pima",
+  "target": "Outcome",
+  "features": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "training_samples": 537,
+  "training_class_counts": {
+    "0": 350,
+    "1": 187
+  },
+  "scale_pos_weight": 1.8716577540106951,
+  "validation_samples": 115,
+  "validation_class_counts": {
+    "0": 75,
+    "1": 40
+  },
+  "test_samples": 116,
+  "test_class_counts": {
+    "0": 75,
+    "1": 41
+  },
+  "threshold": 0.270871639251709,
+  "threshold_selection": {
+    "method": "maximize validation F1; ties choose threshold closest to 0.5",
+    "validation_best_f1": 0.7289719626168224,
+    "candidate_threshold_count": 116
+  },
+  "early_stopping_rounds": 50,
+  "best_iteration": 104,
+  "best_score": 0.47084419147475903,
+  "validation_metrics": {
+    "sample_count": 115,
+    "threshold": 0.270871639251709,
+    "accuracy": 0.7478260869565218,
+    "precision": 0.582089552238806,
+    "recall": 0.975,
+    "f1": 0.7289719626168224,
+    "roc_auc": 0.8459999999999999,
+    "confusion_matrix": {
+      "tn": 47,
+      "fp": 28,
+      "fn": 1,
+      "tp": 39
+    },
+    "classification_report": {
+      "negative (0)": {
+        "precision": 0.9791666666666666,
+        "recall": 0.6266666666666667,
+        "f1-score": 0.7642276422764228,
+        "support": 75.0
+      },
+      "positive (1)": {
+        "precision": 0.582089552238806,
+        "recall": 0.975,
+        "f1-score": 0.7289719626168224,
+        "support": 40.0
+      },
+      "accuracy": 0.7478260869565218,
+      "macro avg": {
+        "precision": 0.7806281094527363,
+        "recall": 0.8008333333333333,
+        "f1-score": 0.7465998024466226,
+        "support": 115.0
+      },
+      "weighted avg": {
+        "precision": 0.8410528877352369,
+        "recall": 0.7478260869565218,
+        "f1-score": 0.7519647971774314,
+        "support": 115.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\nnegative (0)       0.98      0.63      0.76        75\npositive (1)       0.58      0.97      0.73        40\n\n    accuracy                           0.75       115\n   macro avg       0.78      0.80      0.75       115\nweighted avg       0.84      0.75      0.75       115\n"
+  },
+  "test_metrics": {
+    "sample_count": 116,
+    "threshold": 0.270871639251709,
+    "accuracy": 0.7068965517241379,
+    "precision": 0.5573770491803278,
+    "recall": 0.8292682926829268,
+    "f1": 0.6666666666666666,
+    "roc_auc": 0.8338211382113822,
+    "confusion_matrix": {
+      "tn": 48,
+      "fp": 27,
+      "fn": 7,
+      "tp": 34
+    },
+    "classification_report": {
+      "negative (0)": {
+        "precision": 0.8727272727272727,
+        "recall": 0.64,
+        "f1-score": 0.7384615384615385,
+        "support": 75.0
+      },
+      "positive (1)": {
+        "precision": 0.5573770491803278,
+        "recall": 0.8292682926829268,
+        "f1-score": 0.6666666666666666,
+        "support": 41.0
+      },
+      "accuracy": 0.7068965517241379,
+      "macro avg": {
+        "precision": 0.7150521609538003,
+        "recall": 0.7346341463414634,
+        "f1-score": 0.7025641025641025,
+        "support": 116.0
+      },
+      "weighted avg": {
+        "precision": 0.761267279921887,
+        "recall": 0.7068965517241379,
+        "f1-score": 0.7130857648099027,
+        "support": 116.0
+      }
+    },
+    "classification_report_text": "              precision    recall  f1-score   support\n\nnegative (0)       0.87      0.64      0.74        75\npositive (1)       0.56      0.83      0.67        41\n\n    accuracy                           0.71       116\n   macro avg       0.72      0.73      0.70       116\nweighted avg       0.76      0.71      0.71       116\n"
+  },
+  "preprocessing_artifact": "processed\\pima\\preprocessor.pkl",
+  "original_processed_splits_unchanged": true
+}

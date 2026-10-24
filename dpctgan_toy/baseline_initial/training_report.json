@@ -1,0 +1,12 @@
+{
+  "status": "completed on fabricated toy data; DP noise intentionally not deterministic",
+  "training_rows": 500,
+  "epochs": 8,
+  "nonempty_poisson_batches": 64,
+  "private_discriminator_updates": 64,
+  "mean_real_loss": 0.6625803802162409,
+  "mean_fake_loss": 0.7134802974760532,
+  "mean_generator_loss": 0.6758974930271506,
+  "synthetic_rows": 500,
+  "all_training_data_fabricated": true
+}

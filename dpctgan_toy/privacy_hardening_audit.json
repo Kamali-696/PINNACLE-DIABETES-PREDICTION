@@ -1,0 +1,57 @@
+{
+  "status": "NOT VERIFIED - HARDENED TRAINING BLOCKED",
+  "scope": "Source audit and accountant replay only; no training was run in this task.",
+  "real_ehr_or_pima_accessed": false,
+  "original_run_preserved_at": "dpctgan_toy/baseline_initial/",
+  "original_mechanism_audit": {
+    "per_record_losses": "The discriminator returns one score per row; F.softplus(-scores).mean() is backpropagated through the Opacus-wrapped model. Opacus per-sample gradient hooks account for mean reduction by restoring batch-size scaling before computing each row's gradient.",
+    "clipping": "Opacus DPOptimizer computes each record's joint L2 norm across all parameter tensors, derives one clip factor per record, clips each parameter's per-record gradient, then accumulates the clipped gradients.",
+    "noise_and_update": "DPOptimizer adds Gaussian noise to the clipped accumulated gradients, scales for mean reduction, calls the accountant hook, and then the underlying Adam optimizer updates the discriminator.",
+    "generator": "Generator updates and fake-only discriminator updates consume generated data and the discriminator state after private updates. They do not read real rows and are post-processing, provided hooks remain disabled during fake-only discriminator updates.",
+    "sampling": "Opacus DPDataLoader uses UniformWithReplacementSampler (Poisson inclusion probability). The original source seeds the base loader with a fixed public seed; in secure_mode=False, DPDataLoader inherits that predictable generator. The reported Poisson amplification therefore cannot be relied on for the original run.",
+    "unaccounted_real_updates": "No extra raw-real-data gradient/update path was found. The private discriminator update is the only path that reads real batches."
+  },
+  "original_reported_configuration": {
+    "records": 500,
+    "epochs": 8,
+    "noise_multiplier": 1.2,
+    "max_grad_norm": 1.0,
+    "sample_rate": 0.125,
+    "private_optimizer_steps": 64,
+    "delta": 1e-5,
+    "accountant": "Opacus 1.6.0 RDPAccountant",
+    "reported_epsilon": 5.796335380636672,
+    "replayed_epsilon": 5.796335380636672,
+    "replay_method": "Fresh RDPAccountant instance fed 64 events at q=0.125 and sigma=1.2. This independently replays the reported event history, but uses the same Opacus accounting implementation, so it is not an independent accountant implementation.",
+    "privacy_interpretation": "The epsilon numerical replay matches, but it is not a valid certified bound for the original run because sampling randomness was deterministically seeded and secure randomness was disabled. Do not report it as a formal DP guarantee."
+  },
+  "secure_randomness": {
+    "opacus_version": "1.6.0",
+    "source_behavior": "PrivacyEngine(secure_mode=True) imports torchcsprng and creates a random-device generator using the hardcoded token /dev/urandom. Opacus passes that generator both to DPOptimizer noise and to DPDataLoader Poisson sampling.",
+    "environment_probe": "secure_mode=True fails immediately: ModuleNotFoundError for torchcsprng.",
+    "wsl_probe": "WSL executable exists, but wsl --status returned E_ACCESSDENIED; no WSL runtime could be verified.",
+    "compatibility": "Current Python 3.14.3 and PyTorch 2.14.0+cpu work with Opacus 1.6.0 for non-secure mode. The official torchcsprng source documents Windows support for older Python/PyTorch generations, but no compatible installed build was verified for this environment. Opacus also hardcodes /dev/urandom, so installing a Windows build alone would not establish that Opacus secure_mode works on this runtime."
+  },
+  "hardening_changes": [
+    "Added train_dpctgan_toy_hardened.py as a separate fail-closed runner; it requests Opacus secure_mode=True before reading even the fabricated input.",
+    "Removed the fixed seed from the training DataLoader and added runtime identity checks that both the Poisson sampler and DPOptimizer use the exact Opacus secure_rng.",
+    "Redirected future hardened outputs to dpctgan_toy/hardened_run/ so baseline artifacts are not overwritten.",
+    "Preserved the original source and reports under dpctgan_toy/baseline_initial/."
+  ],
+  "versions": {
+    "python": "3.14.3",
+    "pytorch": "2.14.0+cpu",
+    "opacus": "1.6.0",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "torchcsprng": "not installed",
+    "dp_accounting_independent_implementation": "not installed"
+  },
+  "unresolved": [
+    "No hardened training or synthetic-data validation run was performed because secure RNG is unavailable and the original seeded sampling invalidates the assumed Poisson amplification.",
+    "An independent accountant implementation (for example Google dp-accounting) has not been installed or run. The separate Opacus accountant replay is only an event-history cross-check.",
+    "The toy privacy unit is one fabricated row under add/remove record adjacency only; it is not patient-level privacy.",
+    "The prototype is a minimal GAN-style toy, not the medical DP-CTGAN paper implementation; no utility or clinical validity is established."
+  ]
+}

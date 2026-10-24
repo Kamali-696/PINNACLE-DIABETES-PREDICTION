@@ -1,0 +1,71 @@
+PINNACLE DP-CTGAN toy privacy hardening audit
+============================================
+
+STATUS: NOT VERIFIED - HARDENED TRAINING BLOCKED
+
+Scope
+-----
+Source audit and accountant replay only. No training was run in this task.
+No EHR or Pima data was accessed. Original toy artifacts were copied to
+baseline_initial/ before any source changes.
+
+Original mechanism audit
+------------------------
+The real discriminator scores are one scalar per row. The mean softplus loss
+is passed through Opacus GradSampleModule hooks. For mean reduction, Opacus
+restores the batch-size factor in the per-sample backpropagated quantities.
+DPOptimizer computes each row's global L2 norm over every discriminator
+parameter, clips every per-parameter row gradient by that one row-specific
+factor, and only then sums clipped gradients. It adds Gaussian noise with
+standard deviation noise_multiplier * max_grad_norm, scales the noisy result
+for mean reduction, invokes the accountant hook, and calls the underlying
+Adam step.
+
+The generator and fake-only discriminator updates use generated rows and
+current model state only. They are post-processing if they do not consume raw
+rows. The code disables Opacus hooks during the fake-only discriminator update.
+No other raw-row gradient/update path was found.
+
+Original privacy configuration and accounting
+----------------------------------------------
+N=500; epochs=8; sigma=1.2; clipping norm=1.0; q=0.125; 64 real-data
+private optimizer updates; delta=1e-5; Opacus 1.6.0 RDP accountant.
+The previous report states epsilon=5.796335380636672. A fresh RDPAccountant
+fed 64 events with the same q and sigma returns the identical epsilon.
+This is an independent event-history replay, not an independent accountant
+implementation. The reported epsilon is NOT a valid formal bound for that
+run: secure_mode was off and the original loader was seeded, making the
+Poisson sampling schedule predictable. The amplification assumed by the
+accountant cannot be relied on under that configuration.
+
+Secure randomness blocker
+-------------------------
+Opacus 1.6.0 secure_mode imports torchcsprng, creates a random-device
+generator with hardcoded /dev/urandom, and gives it to both the Poisson
+sampler and DPOptimizer. The local secure-mode probe failed immediately
+because torchcsprng is not installed. Python 3.14.3 and PyTorch 2.14.0+cpu
+are installed, but a compatible torchcsprng build and this Opacus
+/dev/urandom configuration were not verified. WSL exists but its status
+probe failed with E_ACCESSDENIED.
+
+Changes
+-------
+* Preserved original source/reports/synthetic output in baseline_initial/.
+* Added train_dpctgan_toy_hardened.py, which requests secure_mode=True before
+  reading the fabricated input, removes the deterministic DataLoader seed,
+  asserts that Poisson sampling uses the same secure RNG as DPOptimizer, and
+  writes any future artifacts under hardened_run/.
+* Added privacy_hardening_audit.json with machine-readable details.
+
+No hardened training was launched. Consequently there is no new fabricated
+training report, no hardened epsilon, and no new synthetic validation result.
+The separate Opacus-accountant replay verifies only that the baseline's event
+history maps to its reported number; a second accountant implementation is
+still required for independent verification.
+
+Versions: Python 3.14.3; PyTorch 2.14.0+cpu; Opacus 1.6.0; NumPy 2.4.2;
+pandas 2.3.3; SciPy 1.17.1; torchcsprng absent; dp-accounting absent.
+
+Privacy unit is one fabricated row with add/remove record adjacency only.
+No patient-level claim, clinical validity, or production privacy guarantee
+is established.

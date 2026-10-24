@@ -1,0 +1,9 @@
+feature,mean_abs_shap_value,output_scale,grouped_transformed_columns
+HbA1c_level,3.2683734794148975,raw margin (log-odds),numeric__HbA1c_level
+blood_glucose_level,2.398805865717888,raw margin (log-odds),numeric__blood_glucose_level
+age,0.8914917558183477,raw margin (log-odds),numeric__age
+bmi,0.5181502151654988,raw margin (log-odds),numeric__bmi
+gender,0.15627916068855516,raw margin (log-odds),"categorical__gender_Female, categorical__gender_Male, categorical__gender_Other"
+hypertension,0.137586156907964,raw margin (log-odds),numeric__hypertension
+heart_disease,0.0924560247579877,raw margin (log-odds),numeric__heart_disease
+smoking_history,0.08363838447589708,raw margin (log-odds),"categorical__smoking_history_current, categorical__smoking_history_ever, categorical__smoking_history_former, categorical__smoking_history_never, categorical__smoking_history_not current"

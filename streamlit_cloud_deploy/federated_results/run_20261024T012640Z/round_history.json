@@ -1,0 +1,1552 @@
+[
+  {
+    "round": 1,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.261656095469221,
+        "parameter_update_l2_norm": 0.024264698989465677
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.903407400235234,
+        "parameter_update_l2_norm": 0.005844633444343549
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.023450198597644807,
+        0.005589198456899762
+      ],
+      "intercept": -0.0006045246790464478
+    }
+  },
+  {
+    "round": 2,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2594768258809008,
+        "parameter_update_l2_norm": 0.02344924498124358
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.9029210084096287,
+        "parameter_update_l2_norm": 0.005535629812235413
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.04608647973793024,
+        0.010760453838296965
+      ],
+      "intercept": -0.002579561997587025
+    }
+  },
+  {
+    "round": 3,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.257413194882105,
+        "parameter_update_l2_norm": 0.022812403315269607
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.9024696836689835,
+        "parameter_update_l2_norm": 0.005361374775146976
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.06801557532631824,
+        0.015574304472554323
+      ],
+      "intercept": -0.005721471327410062
+    }
+  },
+  {
+    "round": 4,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.255438025680928,
+        "parameter_update_l2_norm": 0.02231305130298825
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.9020416197026307,
+        "parameter_update_l2_norm": 0.0052748577860412425
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.08932887460028795,
+        0.020082554157080025
+      ],
+      "intercept": -0.009856012470123807
+    }
+  },
+  {
+    "round": 5,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2535313883930495,
+        "parameter_update_l2_norm": 0.021918504858734165
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.9016288845086371,
+        "parameter_update_l2_norm": 0.0052401123980450205
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.11010461635531844,
+        0.024329522608568372
+      ],
+      "intercept": -0.014834135450394161
+    }
+  },
+  {
+    "round": 6,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.25167865985441,
+        "parameter_update_l2_norm": 0.021603231500818144
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.9012262541273933,
+        "parameter_update_l2_norm": 0.005232052466295804
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.13040977745074323,
+        0.02835312168846851
+      ],
+      "intercept": -0.02052835753567507
+    }
+  },
+  {
+    "round": 7,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2498691022728867,
+        "parameter_update_l2_norm": 0.021347563077733438
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.900830380540848,
+        "parameter_update_l2_norm": 0.005234521189473827
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.1503016955148845,
+        0.03218577953422898
+      ],
+      "intercept": -0.026829652628966586
+    }
+  },
+  {
+    "round": 8,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2480948224210056,
+        "parameter_update_l2_norm": 0.02113651597344573
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.900439200857908,
+        "parameter_update_l2_norm": 0.00523791870443103
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.1698294608159203,
+        0.03585523284462432
+      ],
+      "intercept": -0.033644784661938834
+    }
+  },
+  {
+    "round": 9,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2463500096769236,
+        "parameter_update_l2_norm": 0.020958773203050392
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.9000515201451963,
+        "parameter_update_l2_norm": 0.005237131725845418
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.1890351087169665,
+        0.03938520541727337
+      ],
+      "intercept": -0.040894023943984614
+    }
+  },
+  {
+    "round": 10,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2446303782759696,
+        "parameter_update_l2_norm": 0.020805843199929307
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8996667187997343,
+        "parameter_update_l2_norm": 0.005229971440338217
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.207954640477892,
+        0.04279598887132562
+      ],
+      "intercept": -0.04850919276653058
+    }
+  },
+  {
+    "round": 11,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2429327590596186,
+        "parameter_update_l2_norm": 0.020671385957250786
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8992845489163193,
+        "parameter_update_l2_norm": 0.005216080911424138
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.22661889666503057,
+        0.04610493944164499
+      ],
+      "intercept": -0.056431993484890496
+    }
+  },
+  {
+    "round": 12,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2412548006464494,
+        "parameter_update_l2_norm": 0.020550685362255978
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8989049939832529,
+        "parameter_update_l2_norm": 0.005196202274738259
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.24505430421195035,
+        0.04932690286531296
+      ],
+      "intercept": -0.06461257859936688
+    }
+  },
+  {
+    "round": 13,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.239594750685728,
+        "parameter_update_l2_norm": 0.020440242826481908
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8985281734232116,
+        "parameter_update_l2_norm": 0.005171696986592356
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.26328351529055305,
+        0.052474577718808126
+      ],
+      "intercept": -0.07300832796470377
+    }
+  },
+  {
+    "round": 14,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2379512957203385,
+        "parameter_update_l2_norm": 0.020337468124985367
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.898154278706333,
+        "parameter_update_l2_norm": 0.005144236355961133
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.2813259536089229,
+        0.05555882610414623
+      ],
+      "intercept": -0.08158280317785267
+    }
+  },
+  {
+    "round": 15,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2363234439451563,
+        "parameter_update_l2_norm": 0.02024044628644605
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8977835315341283,
+        "parameter_update_l2_norm": 0.005115603937134928
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.2991982815341608,
+        0.05858893931226561
+      ],
+      "intercept": -0.09030485347190731
+    }
+  },
+  {
+    "round": 16,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2347104393621626,
+        "parameter_update_l2_norm": 0.020147762975271138
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8974161573173588,
+        "parameter_update_l2_norm": 0.005087570417835901
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.316914799517388,
+        0.06157286499438579
+      ],
+      "intercept": -0.09914785113964808
+    }
+  },
+  {
+    "round": 17,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.233111698917943,
+        "parameter_update_l2_norm": 0.020058374314973985
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8970523691349949,
+        "parameter_update_l2_norm": 0.005061815157352958
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.3344877876424625,
+        0.06451740142763385
+      ],
+      "intercept": -0.10808903768924856
+    }
+  },
+  {
+    "round": 18,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.231526766465901,
+        "parameter_update_l2_norm": 0.0199715101813819
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8966923587737278,
+        "parameter_update_l2_norm": 0.005039877706244558
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.351927797697738,
+        0.06742836365090256
+      ],
+      "intercept": -0.11710896466186851
+    }
+  },
+  {
+    "round": 19,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2299552790465889,
+        "parameter_update_l2_norm": 0.019886602542684702
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8963362924604407,
+        "parameter_update_l2_norm": 0.005023128738796369
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.3692439029511727,
+        0.07031072555294522
+      ],
+      "intercept": -0.12619101537606295
+    }
+  },
+  {
+    "round": 20,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.228396942187623,
+        "parameter_update_l2_norm": 0.01980323245663538
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8959843096241695,
+        "parameter_update_l2_norm": 0.00501275383243705
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.38644391176572784,
+        0.07316874140112942
+      ],
+      "intercept": -0.13532099586119498
+    }
+  },
+  {
+    "round": 21,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2268515118086227,
+        "parameter_update_l2_norm": 0.019721090918799266
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8956365235398189,
+        "parameter_update_l2_norm": 0.005009746115497654
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.4035345502997911,
+        0.07600604979191879
+      ],
+      "intercept": -0.14448678494906375
+    }
+  },
+  {
+    "round": 22,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.225318780963487,
+        "parameter_update_l2_norm": 0.019639949968913502
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8952930230715239,
+        "parameter_update_l2_norm": 0.005014905428752112
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.4205216187748309,
+        0.07882576257068002
+      ],
+      "intercept": -0.15367803495135826
+    }
+  },
+  {
+    "round": 23,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2237985701257843,
+        "parameter_update_l2_norm": 0.01955964138117814
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8949538749913152,
+        "parameter_update_l2_norm": 0.005028842608124823
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.4374101251409872,
+        0.0816305408981368
+      ],
+      "intercept": -0.1628859155963165
+    }
+  },
+  {
+    "round": 24,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2222907200695565,
+        "parameter_update_l2_norm": 0.019480040954450595
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8946191265292576,
+        "parameter_update_l2_norm": 0.005051988003913442
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.4542043994147363,
+        0.08442266032451437
+      ],
+      "intercept": -0.1721028949620672
+    }
+  },
+  {
+    "round": 25,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.220795086651513,
+        "parameter_update_l2_norm": 0.019401056933731366
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.89428880793654,
+        "parameter_update_l2_norm": 0.005084603559561617
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.4709081914873127,
+        0.08720406646225484
+      ],
+      "intercept": -0.18132255205309847
+    }
+  },
+  {
+    "round": 26,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2193115369863294,
+        "parameter_update_l2_norm": 0.019322621477644613
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8939629349290783,
+        "parameter_update_l2_norm": 0.00512679780086837
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.48752475479638874,
+        0.08997642261738492
+      ],
+      "intercept": -0.1905394164428281
+    }
+  },
+  {
+    "round": 27,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2178399466427292,
+        "parameter_update_l2_norm": 0.01924468437082925
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.893641510937485,
+        "parameter_update_l2_norm": 0.005178543030314047
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.5040569179064753,
+        0.09274115054242842
+      ],
+      "intercept": -0.19974883106873162
+    }
+  },
+  {
+    "round": 28,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2163801975876138,
+        "parameter_update_l2_norm": 0.019167208390431185
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8933245291280237,
+        "parameter_update_l2_norm": 0.005239693953183537
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.5205071457469737,
+        0.09549946530525247
+      ],
+      "intercept": -0.20894683483345364
+    }
+  },
+  {
+    "round": 29,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2149321766784338,
+        "parameter_update_l2_norm": 0.01909016589122015
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8930119741842798,
+        "parameter_update_l2_norm": 0.005310006929989701
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.5368775920033928,
+        0.0982524051242281
+      ],
+      "intercept": -0.21813006214989691
+    }
+  },
+  {
+    "round": 30,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.213495774557392,
+        "parameter_update_l2_norm": 0.019013536288468462
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8927038238549639,
+        "parameter_update_l2_norm": 0.005389159076465527
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.5531701439406539,
+        0.10100085689699416
+      ],
+      "intercept": -0.22729565698248905
+    }
+  },
+  {
+    "round": 31,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2120708848402022,
+        "parameter_update_l2_norm": 0.018937304202234485
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.892400050282485,
+        "parameter_update_l2_norm": 0.005476766519945573
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.5693864607522615,
+        0.10374557804488431
+      ],
+      "intercept": -0.23644119929092963
+    }
+  },
+  {
+    "round": 32,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2106574035207855,
+        "parameter_update_l2_norm": 0.01886145808896797
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8921006211318284,
+        "parameter_update_l2_norm": 0.00557240125594052
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.585528006370843,
+        0.10648721520510947
+      ],
+      "intercept": -0.24556464208548381
+    }
+  },
+  {
+    "round": 33,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2092552285342741,
+        "parameter_update_l2_norm": 0.018785989232220402
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8918055005412929,
+        "parameter_update_l2_norm": 0.005675606209919122
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6015960775402267,
+        0.10922632022585825
+      ],
+      "intercept": -0.25466425756178
+    }
+  },
+  {
+    "round": 34,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2078642594360889,
+        "parameter_update_l2_norm": 0.018710890998032727
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8915146499168514,
+        "parameter_update_l2_norm": 0.005785908274500681
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6175918278335203,
+        0.11196336385369145
+      ],
+      "intercept": -0.2637385910044729
+    }
+  },
+  {
+    "round": 35,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2064843971661228,
+        "parameter_update_l2_norm": 0.018636158285440383
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.891228028590972,
+        "parameter_update_l2_norm": 0.005902829242997435
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6335162882026919,
+        0.11469874744634294
+      ],
+      "intercept": -0.27278642133848835
+    }
+  },
+  {
+    "round": 36,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2051155438753236,
+        "parameter_update_l2_norm": 0.018561787120859322
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8909455943651936,
+        "parameter_update_l2_norm": 0.0060258946844121706
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6493703845605324,
+        0.1174328129959173
+      ],
+      "intercept": -0.2818067273685316
+    }
+  },
+  {
+    "round": 37,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.203757602798029,
+        "parameter_update_l2_norm": 0.018487774358599163
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8906673039538746,
+        "parameter_update_l2_norm": 0.0061546408970320305
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6651549528234983,
+        0.12016585170631251
+      ],
+      "intercept": -0.29079865888607875
+    }
+  },
+  {
+    "round": 38,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2024104781578446,
+        "parameter_update_l2_norm": 0.018414117459682036
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8903931133445759,
+        "parameter_update_l2_norm": 0.00628862013768465
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6808707517820237,
+        0.12289811133348569
+      ],
+      "intercept": -0.29976151194158707
+    }
+  },
+  {
+    "round": 39,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.2010740750981064,
+        "parameter_update_l2_norm": 0.018340814328460974
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8901229780885969,
+        "parameter_update_l2_norm": 0.006427404355188976
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.6965184741119382,
+        0.12562980246705863
+      ],
+      "intercept": -0.3086947076810412
+    }
+  },
+  {
+    "round": 40,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.199748299630358,
+        "parameter_update_l2_norm": 0.018267863191915642
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8898568535333569,
+        "parameter_update_l2_norm": 0.006570587665282495
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.712098755795326,
+        0.1283611039059918
+      ],
+      "intercept": -0.31759777423269386
+    }
+  },
+  {
+    "round": 41,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1984330585960268,
+        "parameter_update_l2_norm": 0.01819526251047715
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8895946950066448,
+        "parameter_update_l2_norm": 0.006717787796483069
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.7276121841804132,
+        0.13109216725900988
+      ],
+      "intercept": -0.32647033120406227
+    }
+  },
+  {
+    "round": 42,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1971282596377557,
+        "parameter_update_l2_norm": 0.018123010912150583
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8893364579612548,
+        "parameter_update_l2_norm": 0.006868646717741792
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.7430593048769186,
+        0.13382312088159995
+      ],
+      "intercept": -0.3353120764127357
+    }
+  },
+  {
+    "round": 43,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1958338111777986,
+        "parameter_update_l2_norm": 0.01805110714386603
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8890820980871987,
+        "parameter_update_l2_norm": 0.0070228306341433705
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.7584406276549437,
+        0.13655407324526747
+      ],
+      "intercept": -0.34412277452886836
+    }
+  },
+  {
+    "round": 44,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1945496224015775,
+        "parameter_update_l2_norm": 0.01797955003557318
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8888315713975323,
+        "parameter_update_l2_norm": 0.007180029509953145
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.7737566314912123,
+        0.13928511582092656
+      ],
+      "intercept": -0.3529022473537139
+    }
+  },
+  {
+    "round": 45,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.193275603244996,
+        "parameter_update_l2_norm": 0.017908338473765495
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8885848342928313,
+        "parameter_update_l2_norm": 0.007339956251558892
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.7890077688857122,
+        0.14201632554648838
+      ],
+      "intercept": -0.36165036549832413
+    }
+  },
+  {
+    "round": 46,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.192011664384492,
+        "parameter_update_l2_norm": 0.01783747138199209
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8883418436084998,
+        "parameter_update_l2_norm": 0.007502345657927727
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.8041944695540347,
+        0.1447477669386024
+      ],
+      "intercept": -0.37036704126056513
+    }
+  },
+  {
+    "round": 47,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1907577172290724,
+        "parameter_update_l2_norm": 0.017766947706538378
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8881025566483642,
+        "parameter_update_l2_norm": 0.0076669532239732
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.8193171435855023,
+        0.14747949389985676
+      ],
+      "intercept": -0.3790522225277205
+    }
+  },
+  {
+    "round": 48,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1895136739137757,
+        "parameter_update_l2_norm": 0.017696766405944732
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8878669312073941,
+        "parameter_update_l2_norm": 0.007833553863096226
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.8343761841441845,
+        0.15021155126534294
+      ],
+      "intercept": -0.3877058875568659
+    }
+  },
+  {
+    "round": 49,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1882794472941636,
+        "parameter_update_l2_norm": 0.017626926443367396
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8876349255858753,
+        "parameter_update_l2_norm": 0.008001940599117484
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.8493719697787687,
+        0.15294397612615596
+      ],
+      "intercept": -0.3963280405065207
+    }
+  },
+  {
+    "round": 50,
+    "aggregation": "sample-count-weighted FedAvg",
+    "aggregation_weights": {
+      "ehr": 67302,
+      "pima": 537
+    },
+    "nodes": {
+      "ehr": {
+        "node": "ehr",
+        "status": "success",
+        "training_sample_count": 67302,
+        "post_local_train_weighted_log_loss": 1.1870549509415402,
+        "parameter_update_l2_norm": 0.01755742678104654
+      },
+      "pima": {
+        "node": "pima",
+        "status": "success",
+        "training_sample_count": 537,
+        "post_local_train_weighted_log_loss": 0.8874064985969264,
+        "parameter_update_l2_norm": 0.008171923264686005
+      }
+    },
+    "global_parameters": {
+      "coefficients": [
+        0.864304866397739,
+        0.15567679896198508
+      ],
+      "intercept": -0.40491870761132104
+    }
+  }
+]

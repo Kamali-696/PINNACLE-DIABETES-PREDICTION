@@ -1,0 +1,28 @@
+{
+  "experiment": "simulated_two_node_federated_binary_logistic_regression",
+  "aggregation": "sample-count-weighted FedAvg over model coefficients and intercept",
+  "communication_rounds": 50,
+  "local_epochs_per_round": 5,
+  "local_optimizer": "full-batch gradient descent on class-weighted binary cross-entropy",
+  "learning_rate": 0.05,
+  "local_lr_baseline_C": 1.0,
+  "threshold_selection": "per-node validation F1 maximization, ties closest to 0.5",
+  "seed": 42,
+  "nodes": [
+    "ehr",
+    "pima"
+  ],
+  "shared_feature_order": [
+    "age_years_scaled",
+    "bmi_kg_m2_scaled"
+  ],
+  "device": "local process / CPU NumPy; node functions exchange parameters only",
+  "privacy_claim": "none; simulated FL only, no secure aggregation, encryption, or differential privacy",
+  "versions": {
+    "python": "3.14.3",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}

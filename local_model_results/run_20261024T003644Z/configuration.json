@@ -1,0 +1,37 @@
+{
+  "project": "PINNACLE_DIABETES_DETECTION",
+  "run_started_utc": "2026-10-24T00:36:44+00:00",
+  "seed": 42,
+  "output_directory": "D:\\PINNACLE_DIABETES_PREDICTION\\local_model_results\\run_20261024T003644Z",
+  "processed_directory": "D:\\PINNACLE_DIABETES_PREDICTION\\processed",
+  "datasets": [
+    "ehr",
+    "pima"
+  ],
+  "xgboost_parameters": {
+    "n_estimators": 700,
+    "learning_rate": 0.04,
+    "max_depth": 4,
+    "min_child_weight": 2,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "tree_method": "hist",
+    "random_state": 42,
+    "n_jobs": -1,
+    "early_stopping_rounds": 50
+  },
+  "threshold_policy": "validation F1 tuning",
+  "test_split_policy": "test is only loaded after fit and validation threshold selection",
+  "class_weight_policy": "negative training count / positive training count",
+  "versions": {
+    "python": "3.14.3",
+    "xgboost": "3.2.0",
+    "scikit_learn": "1.8.0",
+    "pandas": "2.3.3",
+    "numpy": "2.4.2",
+    "joblib": "1.5.3"
+  }
+}

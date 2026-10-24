@@ -1,0 +1,50 @@
+{
+  "status": "PARTIALLY VERIFIED",
+  "data_origin": "500 fabricated records from generate_fabricated_data.py only",
+  "training_rows": 500,
+  "synthetic_rows": 500,
+  "mechanism": "Opacus 1.6.0 DP-SGD on the discriminator real-record update; generator and fake-only discriminator updates are post-processing of DP state and fresh randomness.",
+  "privacy_unit": "one fabricated row (record-level adjacency); no patient-level claim",
+  "accountant": "Opacus RDP accountant, measured after the actual loop",
+  "epsilon_measured": 5.796335380636672,
+  "delta_configured": 1e-05,
+  "noise_multiplier": 1.2,
+  "max_grad_norm": 1.0,
+  "sampling": "Poisson subsampling via Opacus DPDataLoader",
+  "sample_rate_per_update": 0.125,
+  "private_updates_executed": 64,
+  "accountant_updates": 64,
+  "accountant_history": [
+    [
+      1.2,
+      0.125,
+      64
+    ]
+  ],
+  "rng_mode": "Opacus secure_mode=False; DP-noise RNG is not manually seeded, but uses PyTorch's non-cryptographic CPU RNG",
+  "preprocessing": "fixed public bounds and fixed category vocabulary; no data-derived scaling, imputers, category frequencies, or condition sampling",
+  "postprocessing_validation": {
+    "rows": 500,
+    "schema_matches": true,
+    "missing_cells": 0,
+    "age_in_bounds": true,
+    "bmi_in_bounds": true,
+    "glucose_in_bounds": true,
+    "categories_valid": true,
+    "binary_target_valid": true
+  },
+  "limitations": [
+    "secure_mode=False means this is not suitable for a production privacy claim",
+    "fixed seeds apply to fabricated rows, initialization, and latent samples; DP noise is intentionally not fixed-seed reproducible",
+    "record-level adjacency only; patient identity/unit not established",
+    "toy utility and clinical validity are not assessed",
+    "this is a minimal CTGAN-style GAN, not a faithful reproduction of the medical paper implementation"
+  ],
+  "versions": {
+    "python": "3.14.3",
+    "torch": "2.14.0+cpu",
+    "opacus": "1.6.0",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3"
+  }
+}

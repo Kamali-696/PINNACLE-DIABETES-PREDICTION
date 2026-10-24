@@ -1,0 +1,30 @@
+{
+  "model_type": "binary logistic regression",
+  "feature_order": [
+    "age_years_scaled",
+    "bmi_kg_m2_scaled"
+  ],
+  "coefficients": [
+    0.864304866397739,
+    0.15567679896198508
+  ],
+  "intercept": -0.40491870761132104,
+  "thresholds_by_node": {
+    "ehr": 0.540385054288397,
+    "pima": 0.47565719437494774
+  },
+  "threshold_selection_by_node": {
+    "ehr": {
+      "method": "maximize validation F1; ties select threshold closest to 0.5",
+      "validation_best_f1": 0.3089092422980849,
+      "candidate_threshold_count": 10632
+    },
+    "pima": {
+      "method": "maximize validation F1; ties select threshold closest to 0.5",
+      "validation_best_f1": 0.6808510638297872,
+      "candidate_threshold_count": 115
+    }
+  },
+  "aggregation": "sample-count-weighted FedAvg",
+  "communication_rounds": 50
+}

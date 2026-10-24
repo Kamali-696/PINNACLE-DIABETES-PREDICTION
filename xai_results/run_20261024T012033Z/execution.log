@@ -1,0 +1,50 @@
+SHAP explanation run: D:\PINNACLE_DIABETES_PREDICTION\xai_results\run_20261024T012033Z
+Existing model run: D:\PINNACLE_DIABETES_PREDICTION\local_model_results\run_20261024T003644Z
+SHAP 0.50.0 | XGBoost 3.2.0 | Python 3.14.3
+
+=== EHR ===
+Model: D:\PINNACLE_DIABETES_PREDICTION\local_model_results\run_20261024T003644Z\ehr\model.joblib
+Test cases explained: 14422
+Threshold: 0.871002
+SHAP additivity: PASS (max abs residual 1.91e-05; tolerance 1.0e-04)
+Probability mapping: PASS (max abs residual 8.36e-08)
+Top 10 features by mean absolute SHAP (raw margin):
+   1. HbA1c_level                  3.26837348
+   2. blood_glucose_level          2.39880587
+   3. age                          0.89149176
+   4. bmi                          0.51815022
+   5. gender                       0.15627916
+   6. hypertension                 0.13758616
+   7. heart_disease                0.09245602
+   8. smoking_history              0.08363838
+Selected local cases:
+  test_row_000670: correctly_predicted_positive actual=1 predicted=1 P(positive)=1.0000
+  test_row_005692: correctly_predicted_negative actual=0 predicted=0 P(positive)=0.0000
+  test_row_007870: false_negative actual=1 predicted=0 P(positive)=0.8623
+  test_row_010206: false_positive actual=0 predicted=1 P(positive)=0.8720
+Artifacts: D:\PINNACLE_DIABETES_PREDICTION\xai_results\run_20261024T012033Z\ehr
+
+=== PIMA ===
+Model: D:\PINNACLE_DIABETES_PREDICTION\local_model_results\run_20261024T003644Z\pima\model.joblib
+Test cases explained: 116
+Threshold: 0.270872
+SHAP additivity: PASS (max abs residual 1.24e-06; tolerance 1.0e-04)
+Probability mapping: PASS (max abs residual 6.4e-08)
+Top 10 features by mean absolute SHAP (raw margin):
+   1. Glucose                      0.92239690
+   2. BMI                          0.57320094
+   3. Age                          0.27128445
+   4. DiabetesPedigreeFunction     0.26386218
+   5. Insulin                      0.21593048
+   6. Pregnancies                  0.19792773
+   7. SkinThickness                0.06502402
+   8. BloodPressure                0.06199599
+Selected local cases:
+  test_row_000057: correctly_predicted_positive actual=1 predicted=1 P(positive)=0.9423
+  test_row_000004: correctly_predicted_negative actual=0 predicted=0 P(positive)=0.0221
+  test_row_000109: false_negative actual=1 predicted=0 P(positive)=0.2246
+  test_row_000079: false_positive actual=0 predicted=1 P(positive)=0.2892
+Artifacts: D:\PINNACLE_DIABETES_PREDICTION\xai_results\run_20261024T012033Z\pima
+
+Overall status: success
+XAI output directory: D:\PINNACLE_DIABETES_PREDICTION\xai_results\run_20261024T012033Z

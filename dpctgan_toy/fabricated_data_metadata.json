@@ -1,0 +1,37 @@
+{
+  "origin": "entirely fabricated; no EHR/Pima data read or used",
+  "rows": 500,
+  "seed": 20261023,
+  "distributions": {
+    "age": "Uniform(18, 90)",
+    "bmi": "Normal(28, 7), truncated to [12, 60]",
+    "glucose": "Normal(125, 35), truncated to [50, 300]",
+    "smoking_history": {
+      "never": 0.48,
+      "former": 0.24,
+      "current": 0.2,
+      "unknown": 0.08
+    },
+    "diabetes": "Bernoulli from fixed logistic rule documented in this script"
+  },
+  "bounds": {
+    "age": [
+      18,
+      90
+    ],
+    "bmi": [
+      12,
+      60
+    ],
+    "glucose": [
+      50,
+      300
+    ]
+  },
+  "categories": [
+    "never",
+    "former",
+    "current",
+    "unknown"
+  ]
+}

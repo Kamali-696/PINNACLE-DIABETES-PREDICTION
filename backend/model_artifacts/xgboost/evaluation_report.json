@@ -1,0 +1,155 @@
+{
+  "model_name": "XGBoost diabetes classifier",
+  "trained_at": "2026-10-21T18:42:32+00:00",
+  "dataset": {
+    "file": "diabetes_prediction_dataset.csv",
+    "raw": {
+      "rows": 100000,
+      "columns": [
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "smoking_history",
+        "bmi",
+        "HbA1c_level",
+        "blood_glucose_level",
+        "diabetes"
+      ],
+      "dtypes": {
+        "gender": "str",
+        "age": "float64",
+        "hypertension": "int64",
+        "heart_disease": "int64",
+        "smoking_history": "str",
+        "bmi": "float64",
+        "HbA1c_level": "float64",
+        "blood_glucose_level": "int64",
+        "diabetes": "int64"
+      },
+      "missing_values": {
+        "gender": 0,
+        "age": 0,
+        "hypertension": 0,
+        "heart_disease": 0,
+        "smoking_history": 0,
+        "bmi": 0,
+        "HbA1c_level": 0,
+        "blood_glucose_level": 0,
+        "diabetes": 0
+      },
+      "duplicate_rows": 3854,
+      "class_counts": {
+        "0": 91500,
+        "1": 8500
+      },
+      "categorical_levels": {
+        "gender": [
+          "Female",
+          "Male",
+          "Other"
+        ],
+        "smoking_history": [
+          "No Info",
+          "current",
+          "ever",
+          "former",
+          "never",
+          "not current"
+        ]
+      }
+    },
+    "duplicates_removed": 3854,
+    "rows_after_deduplication": 96146,
+    "class_counts_after_deduplication": {
+      "0": 87664,
+      "1": 8482
+    }
+  },
+  "split": {
+    "method": "stratified",
+    "random_seed": 42,
+    "test_size": 0.2,
+    "validation_size_of_train": 0.1,
+    "class_counts": {
+      "training": {
+        "0": 63117,
+        "1": 6107
+      },
+      "validation": {
+        "0": 7013,
+        "1": 679
+      },
+      "test": {
+        "0": 17534,
+        "1": 1696
+      }
+    }
+  },
+  "metrics": {
+    "decision_threshold": 0.5,
+    "training": {
+      "samples": 69224,
+      "accuracy": 0.9717583497053045,
+      "precision": 0.985273492286115,
+      "recall": 0.6901915834288521,
+      "specificity": 0.999001853700271,
+      "f1": 0.8117477130476649,
+      "roc_auc": 0.9832648199804346,
+      "confusion_matrix": {
+        "tn": 63054,
+        "fp": 63,
+        "fn": 1892,
+        "tp": 4215
+      }
+    },
+    "validation": {
+      "samples": 7692,
+      "accuracy": 0.9703588143525741,
+      "precision": 0.9592668024439919,
+      "recall": 0.6936671575846833,
+      "specificity": 0.9971481534293455,
+      "f1": 0.8051282051282052,
+      "roc_auc": 0.9786353011144672,
+      "confusion_matrix": {
+        "tn": 6993,
+        "fp": 20,
+        "fn": 208,
+        "tp": 471
+      }
+    },
+    "test": {
+      "samples": 19230,
+      "accuracy": 0.9716588663546541,
+      "precision": 0.9799833194328608,
+      "recall": 0.6928066037735849,
+      "specificity": 0.9986312307516825,
+      "f1": 0.8117443868739206,
+      "roc_auc": 0.9777035109415453,
+      "confusion_matrix": {
+        "tn": 17510,
+        "fp": 24,
+        "fn": 521,
+        "tp": 1175
+      }
+    }
+  },
+  "feature_importance_gain": {
+    "gender_Female": 0.007467145100235939,
+    "gender_Male": 0.016368092969059944,
+    "gender_Other": 0.0,
+    "smoking_history_No Info": 0.02810470014810562,
+    "smoking_history_current": 0.0067050582729279995,
+    "smoking_history_ever": 0.0067752511240541935,
+    "smoking_history_former": 0.005929769482463598,
+    "smoking_history_never": 0.005797473713755608,
+    "smoking_history_not current": 0.00744401291012764,
+    "age": 0.043212294578552246,
+    "hypertension": 0.059357669204473495,
+    "heart_disease": 0.037177518010139465,
+    "bmi": 0.02159634232521057,
+    "HbA1c_level": 0.4865370988845825,
+    "blood_glucose_level": 0.2675275206565857
+  },
+  "best_iteration": 279
+}

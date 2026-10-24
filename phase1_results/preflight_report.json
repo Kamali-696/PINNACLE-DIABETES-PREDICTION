@@ -1,0 +1,72 @@
+{
+  "status": "BLOCKED BEFORE GENERATOR TRAINING",
+  "project": "PINNACLE_DIABETES_DETECTION",
+  "run_date": "2026-10-23",
+  "real_splits_inspected": true,
+  "generator_training_started": false,
+  "synthetic_records_generated": false,
+  "validation_or_test_used_for_training": false,
+  "datasets": {
+    "ehr": {
+      "target": "diabetes",
+      "target_column_verified": true,
+      "train_shape": [67302, 9],
+      "validation_shape": [14422, 9],
+      "test_shape": [14422, 9],
+      "feature_columns": ["gender", "age", "hypertension", "heart_disease", "smoking_history", "bmi", "HbA1c_level", "blood_glucose_level"],
+      "categorical_columns": ["gender", "smoking_history"],
+      "numerical_columns": ["age", "hypertension", "heart_disease", "bmi", "HbA1c_level", "blood_glucose_level"],
+      "training_missing_cells": 0,
+      "training_exact_duplicates_after_imputation": 979,
+      "target_counts": {
+        "train": {"0": 61365, "1": 5937},
+        "validation": {"0": 13149, "1": 1273},
+        "test": {"0": 13150, "1": 1272}
+      },
+      "training_categories_observed": {
+        "gender": ["Female", "Male", "Other"],
+        "smoking_history": ["never", "former", "current", "not current", "ever"]
+      }
+    },
+    "pima": {
+      "target": "Outcome",
+      "target_column_verified": true,
+      "train_shape": [537, 9],
+      "validation_shape": [115, 9],
+      "test_shape": [116, 9],
+      "feature_columns": ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age"],
+      "categorical_columns": [],
+      "numerical_columns": ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age"],
+      "training_missing_cells": 0,
+      "training_exact_duplicates": 0,
+      "target_counts": {
+        "train": {"0": 350, "1": 187},
+        "validation": {"0": 75, "1": 40},
+        "test": {"0": 75, "1": 41}
+      },
+      "preprocessing_note": "Preprocessing report documents zero-as-missing handling for Glucose, BloodPressure, SkinThickness, Insulin, and BMI, followed by train-derived median imputation. Pregnancies=0 was preserved."
+    }
+  },
+  "current_generator_implementation": "The only existing code is a fabricated-data, 5-column minimal GAN-style toy. It hardcodes age, BMI, glucose, smoking_history, and diabetes, and is not a full CTGAN implementation for either processed project schema.",
+  "privacy_status": {
+    "host_opacus": "1.6.0",
+    "host_secure_mode": "unavailable: torchcsprng is missing",
+    "verified_secure_sampling": false,
+    "verified_secure_noise": false,
+    "independent_accountant_comparison": false,
+    "epsilon": null,
+    "reason": "No secure training run occurred. Do not fall back to secure_mode=False or reuse the baseline toy epsilon."
+  },
+  "end_to_end_privacy_limitation": "The preprocessing reports disclose training-derived median/mode imputations and serialized transforms. A downstream DP generator accountant alone would not account for those prior data-dependent preprocessing outputs.",
+  "quality_metrics": {
+    "DCR": "not calculated; no synthetic records generated",
+    "KS": "not calculated; no synthetic records generated",
+    "categorical_distribution_comparison": "not calculated; no synthetic records generated"
+  },
+  "unresolved": [
+    "Install and verify a compatible torchcsprng implementation in an isolated environment, then verify that Opacus DPOptimizer and the Poisson sampler share its secure generator.",
+    "Run a data-free secure-mode probe and independent Google dp-accounting comparison before any real-data training.",
+    "Select or implement a faithful CTGAN-compatible mixed-data generator. The existing toy is not sufficient for the EHR and Pima schemas.",
+    "Decide whether the privacy claim covers only the downstream DP generator on preprocessed records or the full preprocessing-plus-generation pipeline. Prior train-derived imputation steps are not differentially private."
+  ]
+}

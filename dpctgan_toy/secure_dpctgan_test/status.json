@@ -1,0 +1,48 @@
+{
+  "status": "UNVERIFIED - STOPPED BEFORE TRAINING",
+  "baseline_initial_preserved": true,
+  "real_ehr_or_pima_accessed": false,
+  "training_or_synthetic_generation_run": false,
+  "environment": {
+    "host_python": "3.14.3",
+    "host_pytorch": "2.14.0+cpu",
+    "host_opacus": "1.6.0",
+    "host_torchcsprng": "not installed; secure_mode=True fails with ModuleNotFoundError",
+    "isolated_linux": "Ubuntu 22.04 WSL, Python 3.10.12",
+    "isolated_linux_packages_installed": {
+      "torch": "2.6.0+cpu",
+      "opacus": "1.6.0",
+      "dp-accounting": "0.6.0",
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.15.3",
+      "opt-einsum": "3.4.0"
+    },
+    "torchcsprng": "not installed or verified in isolated Linux venv",
+    "isolated_venv": "/root/pinnacle_dpctgan_secure_env",
+    "requirements_manifest": "requirements-tested-base.txt"
+  },
+  "security_checks": {
+    "host_secure_mode": "failed before training: ModuleNotFoundError: No module named 'torchcsprng'",
+    "linux_secure_mode": "not run; torchcsprng installation/runtime probe was not approved",
+    "secure_noise_verified": false,
+    "secure_poisson_sampling_verified": false,
+    "fixed_sampling_seed_removed_in_candidate_runner": true,
+    "candidate_runner_checks_both_rng_identities": true
+  },
+  "accounting": {
+    "accountant_candidate": "Opacus 1.6.0 RDPAccountant",
+    "independent_accountant_candidate": "Google dp-accounting 0.6.0 RDP",
+    "independent_comparison_run": false,
+    "epsilon_for_new_test": null,
+    "delta_configured": 1e-5,
+    "noise_multiplier_configured_in_candidate": 1.2,
+    "sample_rate_expected_from_current_toy_loader": 0.125,
+    "max_grad_norm_configured_in_candidate": 1.0,
+    "planned_max_private_steps_at_8_epochs": 64,
+    "formal_guarantee": false,
+    "reason": "No secure training run occurred; secure RNG path and independent accountant have not been exercised. The prior 5.796335 epsilon is not reused as a guarantee because the baseline sampling RNG was deterministically seeded."
+  },
+  "blocking_action": "The escalated torchcsprng installation attempt and a separate read-only WSL probe were rejected. Stop here rather than fall back to secure_mode=False.",
+  "next_step": "Run the exact secure-mode probe and CSPRNG build validation with user-assisted WSL commands. Train only after torchcsprng initialization, secure noise/sampler identity checks, and Google dp-accounting comparison all pass."
+}

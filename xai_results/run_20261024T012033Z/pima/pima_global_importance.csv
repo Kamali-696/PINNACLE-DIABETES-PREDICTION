@@ -1,0 +1,9 @@
+feature,mean_abs_shap_value,output_scale,grouped_transformed_columns
+Glucose,0.9223968987032001,raw margin (log-odds),numeric__Glucose
+BMI,0.5732009350964479,raw margin (log-odds),numeric__BMI
+Age,0.2712844461122335,raw margin (log-odds),numeric__Age
+DiabetesPedigreeFunction,0.26386217563413084,raw margin (log-odds),numeric__DiabetesPedigreeFunction
+Insulin,0.21593048283027422,raw margin (log-odds),numeric__Insulin
+Pregnancies,0.19792773023424348,raw margin (log-odds),numeric__Pregnancies
+SkinThickness,0.06502401825554412,raw margin (log-odds),numeric__SkinThickness
+BloodPressure,0.06199599465291048,raw margin (log-odds),numeric__BloodPressure

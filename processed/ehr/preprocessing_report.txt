@@ -1,0 +1,67 @@
+DATASET INSPECTION: ehr
+Shape: (100000, 9)
+Columns: ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level', 'diabetes']
+Data types:
+gender                  object
+age                    float64
+hypertension             int64
+heart_disease            int64
+smoking_history         object
+bmi                    float64
+HbA1c_level            float64
+blood_glucose_level      int64
+diabetes                 int64
+Numerical columns: ['age', 'hypertension', 'heart_disease', 'bmi', 'HbA1c_level', 'blood_glucose_level', 'diabetes']
+Categorical columns: ['gender', 'smoking_history']
+First five rows:
+gender  age  hypertension  heart_disease smoking_history   bmi  HbA1c_level  blood_glucose_level  diabetes
+Female 80.0             0              1           never 25.19          6.6                  140         0
+Female 54.0             0              0         No Info 27.32          6.6                   80         0
+  Male 28.0             0              0           never 27.32          5.7                  158         0
+Female 36.0             0              0         current 23.45          5.0                  155         0
+  Male 76.0             1              1         current 20.14          4.8                  155         0
+Missing values by column:
+gender                 0
+age                    0
+hypertension           0
+heart_disease          0
+smoking_history        0
+bmi                    0
+HbA1c_level            0
+blood_glucose_level    0
+diabetes               0
+Exact duplicate rows: 3854
+Target diabetes distribution:
+diabetes
+0    91500
+1     8500
+
+PREPROCESSING REPORT
+Original shape: (100000, 9)
+Cleaned shape after exact duplicate removal: (96146, 9)
+Exact duplicate rows removed: 3854
+Invalid/out-of-range values converted to missing by column: {'age': 0, 'bmi': 0, 'HbA1c_level': 0, 'blood_glucose_level': 0, 'hypertension': 0, 'heart_disease': 0}
+Missing values after invalid/sentinel handling and before imputation: {'gender': 0, 'age': 0, 'hypertension': 0, 'heart_disease': 0, 'smoking_history': 32887, 'bmi': 0, 'HbA1c_level': 0, 'blood_glucose_level': 0}
+Missing values remaining in exported CSVs after train-only imputation: {"train": {"gender": 0, "age": 0, "hypertension": 0, "heart_disease": 0, "smoking_history": 0, "bmi": 0, "HbA1c_level": 0, "blood_glucose_level": 0}, "validation": {"gender": 0, "age": 0, "hypertension": 0, "heart_disease": 0, "smoking_history": 0, "bmi": 0, "HbA1c_level": 0, "blood_glucose_level": 0}, "test": {"gender": 0, "age": 0, "hypertension": 0, "heart_disease": 0, "smoking_history": 0, "bmi": 0, "HbA1c_level": 0, "blood_glucose_level": 0}}
+Features retained: ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
+Features removed: [] (target excluded from transformer inputs)
+Target retained separately as binary 0/1: diabetes
+Target distribution before cleaning: {'0': 91500, '1': 8500}
+Target distribution after duplicate removal/cleaning: {'0': 87664, '1': 8482}
+Split sizes and target distributions:
+  train: n=67302, target={'0': 61365, '1': 5937}
+  validation: n=14422, target={'0': 13149, '1': 1273}
+  test: n=14422, target={'0': 13150, '1': 1272}
+
+Imputation/encoding/scaling decisions:
+- Missing numeric feature values are imputed with the training split median in preprocessor.pkl.
+- Missing categorical feature values are imputed with the training split most frequent category.
+- Categorical features are one-hot encoded with unknown categories ignored; category vocabulary is learned from training only.
+- Numeric features are standardized using training-only mean and standard deviation in preprocessor.pkl.
+- Exported split CSVs retain source feature names/categories and units, with train-only imputation values applied: {'age': 43.0, 'hypertension': 0.0, 'heart_disease': 0.0, 'bmi': 27.32, 'HbA1c_level': 5.8, 'blood_glucose_level': 140.0, 'gender': 'Female', 'smoking_history': 'never'}.
+- The saved transformer is fitted on the unscaled training features and retains reusable imputation/encoding/scaling operations; no target is passed to it.
+- No records are removed for invalid measurements; invalid observations become missing and are imputed at transform time.
+- Exact duplicate rows are removed before splitting to reduce leakage from repeated records.
+- smoking_history 'No Info' is treated as missing, then imputed from training-set mode.
+- EHR accepted ranges used for quality screening (outside -> missing): age 0–120 years; BMI 10–100 kg/m²; HbA1c 3–20%; blood glucose 20–1000 mg/dL; hypertension/heart_disease 0 or 1.
+- Gender and smoking_history remain categorical in CSV and are one-hot encoded only by the reusable transformer.

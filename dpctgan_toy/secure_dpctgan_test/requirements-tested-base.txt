@@ -1,0 +1,16 @@
+# Installed in /root/pinnacle_dpctgan_secure_env (Ubuntu 22.04, Python 3.10.12).
+# These are the tested base packages. This is intentionally NOT a complete
+# secure-training requirements file because torchcsprng compatibility is not
+# verified and must not be omitted or silently disabled.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+opacus==1.6.0
+dp-accounting==0.6.0
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.3
+opt-einsum==3.4.0
+
+# torchcsprng: NOT installed or verified. Do not treat this base manifest as a
+# usable secure DP environment until a compatible build passes the runtime
+# checks in environment_check.py and the Opacus secure sampler/noise checks.

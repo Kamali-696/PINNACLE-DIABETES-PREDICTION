@@ -1,0 +1,55 @@
+PINNACLE DIABETES DETECTION — PHASE 1 PREFLIGHT
+================================================
+Status: BLOCKED BEFORE GENERATOR TRAINING
+
+The EHR and Pima processed splits were inspected separately. Their target
+columns are present and no preprocessing or split files were changed.
+
+EHR
+---
+Target: diabetes
+Train: 67,302 x 9; validation: 14,422 x 9; test: 14,422 x 9
+Training target counts: 0=61,365; 1=5,937
+Categorical features: gender, smoking_history
+Numeric features per preprocessing metadata: age, hypertension,
+heart_disease, bmi, HbA1c_level, blood_glucose_level
+Missing cells in train: 0
+Exact duplicate rows in exported train after imputation: 979
+Observed training categories: gender={Female, Male, Other};
+smoking_history={never, former, current, not current, ever}
+
+Pima
+----
+Target: Outcome
+Train: 537 x 9; validation: 115 x 9; test: 116 x 9
+Training target counts: 0=350; 1=187
+All eight predictors are numeric; no missing cells or exact duplicate rows
+remain in exported train. Preprocessing documentation says zero in Glucose,
+BloodPressure, SkinThickness, Insulin, and BMI was treated as missing and
+imputed using train medians. Pregnancies=0 was preserved.
+
+Generator and privacy status
+----------------------------
+The only existing generator is a 5-column fabricated-data toy with hardcoded
+age, BMI, glucose, smoking_history, and diabetes. It is not a full CTGAN
+implementation for the current EHR and Pima feature schemas.
+
+Opacus 1.6.0 secure mode cannot initialize in the host Python environment
+because torchcsprng is missing. Secure noise, secure Poisson sampling, and the
+independent Google dp-accounting comparison have not been verified in the
+isolated WSL environment. The attempted elevated torchcsprng installation and
+subsequent read-only probe were rejected. Training was not started, and there
+is no epsilon, DCR, KS, categorical comparison, or synthetic dataset to report.
+
+No ordinary CTGAN or non-private fallback was used. The prior baseline epsilon
+is not reused as a guarantee: its sampling generator was seeded. The EHR and
+Pima preprocessing reports also document train-derived median/mode imputation
+and fitted transforms. A downstream generator accountant would not account
+for those prior data-dependent preprocessing outputs, so an end-to-end privacy
+claim would require addressing them.
+
+No real-data preprocessing, validation, test files, or baseline files were
+modified. No DP-CTGAN training, KAN, federated learning, or downstream work
+was started.
+
+Full machine-readable details: preflight_report.json

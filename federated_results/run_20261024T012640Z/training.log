@@ -1,0 +1,75 @@
+Federated results: D:\PINNACLE_DIABETES_PREDICTION\federated_results\run_20261024T012640Z
+Shared feature schema: ['age_years_scaled', 'bmi_kg_m2_scaled']
+Mapping: Age (years) / 100; BMI (kg/m^2) / 100; common fixed scaling, no fitted scaler.
+Nodes: EHR and Pima; target labels stay local and are not model inputs.
+
+Node EHR: train n=67302; negatives=61365; positives=5937; positive-class weight=10.33602830
+
+Node PIMA: train n=537; negatives=350; positives=187; positive-class weight=1.87165775
+Round 1/50: EHR=success loss=1.261656 update_norm=0.024265 | Pima=success loss=0.903407 update_norm=0.005845
+Round 2/50: EHR=success loss=1.259477 update_norm=0.023449 | Pima=success loss=0.902921 update_norm=0.005536
+Round 3/50: EHR=success loss=1.257413 update_norm=0.022812 | Pima=success loss=0.902470 update_norm=0.005361
+Round 4/50: EHR=success loss=1.255438 update_norm=0.022313 | Pima=success loss=0.902042 update_norm=0.005275
+Round 5/50: EHR=success loss=1.253531 update_norm=0.021919 | Pima=success loss=0.901629 update_norm=0.005240
+Round 6/50: EHR=success loss=1.251679 update_norm=0.021603 | Pima=success loss=0.901226 update_norm=0.005232
+Round 7/50: EHR=success loss=1.249869 update_norm=0.021348 | Pima=success loss=0.900830 update_norm=0.005235
+Round 8/50: EHR=success loss=1.248095 update_norm=0.021137 | Pima=success loss=0.900439 update_norm=0.005238
+Round 9/50: EHR=success loss=1.246350 update_norm=0.020959 | Pima=success loss=0.900052 update_norm=0.005237
+Round 10/50: EHR=success loss=1.244630 update_norm=0.020806 | Pima=success loss=0.899667 update_norm=0.005230
+Round 11/50: EHR=success loss=1.242933 update_norm=0.020671 | Pima=success loss=0.899285 update_norm=0.005216
+Round 12/50: EHR=success loss=1.241255 update_norm=0.020551 | Pima=success loss=0.898905 update_norm=0.005196
+Round 13/50: EHR=success loss=1.239595 update_norm=0.020440 | Pima=success loss=0.898528 update_norm=0.005172
+Round 14/50: EHR=success loss=1.237951 update_norm=0.020337 | Pima=success loss=0.898154 update_norm=0.005144
+Round 15/50: EHR=success loss=1.236323 update_norm=0.020240 | Pima=success loss=0.897784 update_norm=0.005116
+Round 16/50: EHR=success loss=1.234710 update_norm=0.020148 | Pima=success loss=0.897416 update_norm=0.005088
+Round 17/50: EHR=success loss=1.233112 update_norm=0.020058 | Pima=success loss=0.897052 update_norm=0.005062
+Round 18/50: EHR=success loss=1.231527 update_norm=0.019972 | Pima=success loss=0.896692 update_norm=0.005040
+Round 19/50: EHR=success loss=1.229955 update_norm=0.019887 | Pima=success loss=0.896336 update_norm=0.005023
+Round 20/50: EHR=success loss=1.228397 update_norm=0.019803 | Pima=success loss=0.895984 update_norm=0.005013
+Round 21/50: EHR=success loss=1.226852 update_norm=0.019721 | Pima=success loss=0.895637 update_norm=0.005010
+Round 22/50: EHR=success loss=1.225319 update_norm=0.019640 | Pima=success loss=0.895293 update_norm=0.005015
+Round 23/50: EHR=success loss=1.223799 update_norm=0.019560 | Pima=success loss=0.894954 update_norm=0.005029
+Round 24/50: EHR=success loss=1.222291 update_norm=0.019480 | Pima=success loss=0.894619 update_norm=0.005052
+Round 25/50: EHR=success loss=1.220795 update_norm=0.019401 | Pima=success loss=0.894289 update_norm=0.005085
+Round 26/50: EHR=success loss=1.219312 update_norm=0.019323 | Pima=success loss=0.893963 update_norm=0.005127
+Round 27/50: EHR=success loss=1.217840 update_norm=0.019245 | Pima=success loss=0.893642 update_norm=0.005179
+Round 28/50: EHR=success loss=1.216380 update_norm=0.019167 | Pima=success loss=0.893325 update_norm=0.005240
+Round 29/50: EHR=success loss=1.214932 update_norm=0.019090 | Pima=success loss=0.893012 update_norm=0.005310
+Round 30/50: EHR=success loss=1.213496 update_norm=0.019014 | Pima=success loss=0.892704 update_norm=0.005389
+Round 31/50: EHR=success loss=1.212071 update_norm=0.018937 | Pima=success loss=0.892400 update_norm=0.005477
+Round 32/50: EHR=success loss=1.210657 update_norm=0.018861 | Pima=success loss=0.892101 update_norm=0.005572
+Round 33/50: EHR=success loss=1.209255 update_norm=0.018786 | Pima=success loss=0.891806 update_norm=0.005676
+Round 34/50: EHR=success loss=1.207864 update_norm=0.018711 | Pima=success loss=0.891515 update_norm=0.005786
+Round 35/50: EHR=success loss=1.206484 update_norm=0.018636 | Pima=success loss=0.891228 update_norm=0.005903
+Round 36/50: EHR=success loss=1.205116 update_norm=0.018562 | Pima=success loss=0.890946 update_norm=0.006026
+Round 37/50: EHR=success loss=1.203758 update_norm=0.018488 | Pima=success loss=0.890667 update_norm=0.006155
+Round 38/50: EHR=success loss=1.202410 update_norm=0.018414 | Pima=success loss=0.890393 update_norm=0.006289
+Round 39/50: EHR=success loss=1.201074 update_norm=0.018341 | Pima=success loss=0.890123 update_norm=0.006427
+Round 40/50: EHR=success loss=1.199748 update_norm=0.018268 | Pima=success loss=0.889857 update_norm=0.006571
+Round 41/50: EHR=success loss=1.198433 update_norm=0.018195 | Pima=success loss=0.889595 update_norm=0.006718
+Round 42/50: EHR=success loss=1.197128 update_norm=0.018123 | Pima=success loss=0.889336 update_norm=0.006869
+Round 43/50: EHR=success loss=1.195834 update_norm=0.018051 | Pima=success loss=0.889082 update_norm=0.007023
+Round 44/50: EHR=success loss=1.194550 update_norm=0.017980 | Pima=success loss=0.888832 update_norm=0.007180
+Round 45/50: EHR=success loss=1.193276 update_norm=0.017908 | Pima=success loss=0.888585 update_norm=0.007340
+Round 46/50: EHR=success loss=1.192012 update_norm=0.017837 | Pima=success loss=0.888342 update_norm=0.007502
+Round 47/50: EHR=success loss=1.190758 update_norm=0.017767 | Pima=success loss=0.888103 update_norm=0.007667
+Round 48/50: EHR=success loss=1.189514 update_norm=0.017697 | Pima=success loss=0.887867 update_norm=0.007834
+Round 49/50: EHR=success loss=1.188279 update_norm=0.017627 | Pima=success loss=0.887635 update_norm=0.008002
+Round 50/50: EHR=success loss=1.187055 update_norm=0.017557 | Pima=success loss=0.887406 update_norm=0.008172
+
+EHR test metrics:
+  local XGBoost                      acc=0.9712 precision=0.9385 recall=0.7201 F1=0.8149 ROC-AUC=0.9791 confusion={'tn': 13090, 'fp': 60, 'fn': 356, 'tp': 916}
+  local logistic regression          acc=0.7796 precision=0.2335 recall=0.6564 F1=0.3445 ROC-AUC=0.8184 confusion={'tn': 10409, 'fp': 2741, 'fn': 437, 'tp': 835}
+  federated global logistic regression acc=0.7742 precision=0.2135 recall=0.5810 F1=0.3122 ROC-AUC=0.7890 confusion={'tn': 10427, 'fp': 2723, 'fn': 533, 'tp': 739}
+
+PIMA test metrics:
+  local XGBoost                      acc=0.7069 precision=0.5574 recall=0.8293 F1=0.6667 ROC-AUC=0.8338 confusion={'tn': 48, 'fp': 27, 'fn': 7, 'tp': 34}
+  local logistic regression          acc=0.6379 precision=0.4933 recall=0.9024 F1=0.6379 ROC-AUC=0.7320 confusion={'tn': 37, 'fp': 38, 'fn': 4, 'tp': 37}
+  federated global logistic regression acc=0.6638 precision=0.5192 recall=0.6585 F1=0.5806 ROC-AUC=0.7067 confusion={'tn': 50, 'fp': 25, 'fn': 14, 'tp': 27}
+
+Federated status: SUCCESS
+Aggregation: sample-count-weighted FedAvg; rounds=50; local epochs=5
+Final global parameters: coefficients=[0.864304866397739, 0.15567679896198508] intercept=-0.40491871
+Per-node thresholds selected on local validation: {'ehr': 0.540385054288397, 'pima': 0.47565719437494774}
+No raw data was serialized or included in server update artifacts. This is simulated FL without secure aggregation, encryption, or differential privacy.
+Results directory: D:\PINNACLE_DIABETES_PREDICTION\federated_results\run_20261024T012640Z

@@ -1,0 +1,10 @@
+{
+  "rows": 500,
+  "schema_matches": true,
+  "missing_cells": 0,
+  "age_in_bounds": true,
+  "bmi_in_bounds": true,
+  "glucose_in_bounds": true,
+  "categories_valid": true,
+  "binary_target_valid": true
+}

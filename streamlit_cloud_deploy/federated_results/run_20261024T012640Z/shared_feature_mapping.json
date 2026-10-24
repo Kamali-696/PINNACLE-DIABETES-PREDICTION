@@ -1,0 +1,48 @@
+{
+  "shared_feature_order": [
+    "age_years_scaled",
+    "bmi_kg_m2_scaled"
+  ],
+  "features": {
+    "age_years_scaled": {
+      "EHR_source_column": "age",
+      "Pima_source_column": "Age",
+      "definition": "participant age",
+      "unit": "years",
+      "transformation": "divide raw source-scale age by fixed public constant 100.0"
+    },
+    "bmi_kg_m2_scaled": {
+      "EHR_source_column": "bmi",
+      "Pima_source_column": "BMI",
+      "definition": "body mass index",
+      "unit": "kg/m^2",
+      "transformation": "divide raw source-scale BMI by fixed public constant 100.0"
+    }
+  },
+  "excluded_nonmatching_features": {
+    "EHR": [
+      "gender",
+      "hypertension",
+      "heart_disease",
+      "smoking_history",
+      "HbA1c_level",
+      "blood_glucose_level"
+    ],
+    "Pima": [
+      "Pregnancies",
+      "Glucose",
+      "BloodPressure",
+      "SkinThickness",
+      "Insulin",
+      "DiabetesPedigreeFunction"
+    ],
+    "reason": "No corresponding feature with a sufficiently equivalent definition exists in both schemas. In particular, Pima Glucose is a 2-hour oral glucose tolerance test measurement, while EHR blood_glucose_level is described as glucose at the time of measurement; these are not treated as interchangeable."
+  },
+  "targets": {
+    "ehr": "diabetes (0/1)",
+    "pima": "Outcome (0/1)"
+  },
+  "preprocessing": "Reuse processed CSVs with train-only imputation already applied; use fixed shared unit scaling. No fitted transform is learned in this experiment.",
+  "unit_compatibility_basis": "Project preprocessing reports list age in years and BMI in kg/m^2 for both datasets; source feature descriptions checked against Pima documentation.",
+  "scope_note": "Two shared features are sufficient for a restricted FedAvg technical experiment but omit dataset-specific predictors and do not establish clinical utility."
+}

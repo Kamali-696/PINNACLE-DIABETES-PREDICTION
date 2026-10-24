@@ -1,0 +1,180 @@
+{
+  "dataset": "pima",
+  "model_artifact": "local_model_results\\run_20261024T003644Z\\pima\\model.joblib",
+  "preprocessor_artifact": "processed\\pima\\preprocessor.pkl",
+  "evaluation_report": "local_model_results\\run_20261024T003644Z\\pima\\evaluation_report.json",
+  "test_split": "processed\\pima\\test.csv",
+  "target": "Outcome",
+  "feature_names_original_order": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "transformed_feature_names": [
+    "numeric__Pregnancies",
+    "numeric__Glucose",
+    "numeric__BloodPressure",
+    "numeric__SkinThickness",
+    "numeric__Insulin",
+    "numeric__BMI",
+    "numeric__DiabetesPedigreeFunction",
+    "numeric__Age"
+  ],
+  "transformed_to_original_feature_grouping": {
+    "Pregnancies": [
+      "numeric__Pregnancies"
+    ],
+    "Glucose": [
+      "numeric__Glucose"
+    ],
+    "BloodPressure": [
+      "numeric__BloodPressure"
+    ],
+    "SkinThickness": [
+      "numeric__SkinThickness"
+    ],
+    "Insulin": [
+      "numeric__Insulin"
+    ],
+    "BMI": [
+      "numeric__BMI"
+    ],
+    "DiabetesPedigreeFunction": [
+      "numeric__DiabetesPedigreeFunction"
+    ],
+    "Age": [
+      "numeric__Age"
+    ]
+  },
+  "categorical_plot_value_codes": {},
+  "test_rows_explained": 116,
+  "classification_threshold": 0.270871639251709,
+  "local_case_ids_are": "1-based row positions in the saved test.csv; no record identifier column was present in the model report",
+  "local_cases": [
+    {
+      "case_type": "correctly_predicted_positive",
+      "test_row_index_zero_based": 56,
+      "case_id": "test_row_000057",
+      "actual_label": 1,
+      "predicted_label": 1,
+      "positive_probability": 0.942336916923523,
+      "threshold": 0.270871639251709,
+      "waterfall_file": "pima_local_waterfalls\\test_row_000057_correctly_predicted_positive.png",
+      "baseline_raw_margin": 0.0360867902636528,
+      "final_raw_margin": 2.79374623298645,
+      "shap_reconstructed_raw_margin": 2.7937461687251925,
+      "feature_values": {
+        "Pregnancies": 8.0,
+        "Glucose": 179.0,
+        "BloodPressure": 72.0,
+        "SkinThickness": 42.0,
+        "Insulin": 130.0,
+        "BMI": 32.7,
+        "DiabetesPedigreeFunction": 0.7190000000000001,
+        "Age": 36.0
+      }
+    },
+    {
+      "case_type": "correctly_predicted_negative",
+      "test_row_index_zero_based": 3,
+      "case_id": "test_row_000004",
+      "actual_label": 0,
+      "predicted_label": 0,
+      "positive_probability": 0.022077593952417374,
+      "threshold": 0.270871639251709,
+      "waterfall_file": "pima_local_waterfalls\\test_row_000004_correctly_predicted_negative.png",
+      "baseline_raw_margin": 0.0360867902636528,
+      "final_raw_margin": -3.7908670902252197,
+      "shap_reconstructed_raw_margin": -3.790867365896702,
+      "feature_values": {
+        "Pregnancies": 1.0,
+        "Glucose": 91.0,
+        "BloodPressure": 54.0,
+        "SkinThickness": 25.0,
+        "Insulin": 100.0,
+        "BMI": 25.2,
+        "DiabetesPedigreeFunction": 0.2339999999999999,
+        "Age": 23.0
+      }
+    },
+    {
+      "case_type": "false_negative",
+      "test_row_index_zero_based": 108,
+      "case_id": "test_row_000109",
+      "actual_label": 1,
+      "predicted_label": 0,
+      "positive_probability": 0.22461694478988647,
+      "threshold": 0.270871639251709,
+      "waterfall_file": "pima_local_waterfalls\\test_row_000109_false_negative.png",
+      "baseline_raw_margin": 0.0360867902636528,
+      "final_raw_margin": -1.2389607429504395,
+      "shap_reconstructed_raw_margin": -1.2389606665819883,
+      "feature_values": {
+        "Pregnancies": 3.0,
+        "Glucose": 121.0,
+        "BloodPressure": 52.0,
+        "SkinThickness": 29.0,
+        "Insulin": 126.0,
+        "BMI": 36.0,
+        "DiabetesPedigreeFunction": 0.127,
+        "Age": 25.0
+      }
+    },
+    {
+      "case_type": "false_positive",
+      "test_row_index_zero_based": 78,
+      "case_id": "test_row_000079",
+      "actual_label": 0,
+      "predicted_label": 1,
+      "positive_probability": 0.2891600430011749,
+      "threshold": 0.270871639251709,
+      "waterfall_file": "pima_local_waterfalls\\test_row_000079_false_positive.png",
+      "baseline_raw_margin": 0.0360867902636528,
+      "final_raw_margin": -0.8994669914245605,
+      "shap_reconstructed_raw_margin": -0.8994667306542397,
+      "feature_values": {
+        "Pregnancies": 2.0,
+        "Glucose": 142.0,
+        "BloodPressure": 82.0,
+        "SkinThickness": 18.0,
+        "Insulin": 64.0,
+        "BMI": 24.7,
+        "DiabetesPedigreeFunction": 0.7609999999999999,
+        "Age": 21.0
+      }
+    }
+  ],
+  "explainer": "shap.TreeExplainer",
+  "shap_version": "0.50.0",
+  "xgboost_version": "3.2.0",
+  "sklearn_version": "1.8.0",
+  "python_version": "3.14.3",
+  "output_scale": "raw margin / log-odds for the positive class; SHAP values are additive log-odds contributions, not percentages, risks, causes, or clinical effects",
+  "expected_value_baseline_raw_margin": 0.0360867902636528,
+  "additivity_check": {
+    "passed": true,
+    "tolerance": 0.0001,
+    "max_absolute_residual": 1.2386590242385864e-06,
+    "mean_absolute_residual": 2.7544467292469125e-07,
+    "compared_against": "saved XGBoost classifier predict(output_margin=True)"
+  },
+  "probability_mapping_check": {
+    "passed": true,
+    "max_absolute_probability_residual": 6.397237128918931e-08,
+    "note": "sigmoid(raw margin) compared with saved classifier predict_proba positive-class probability"
+  },
+  "global_importance_csv": "pima_global_importance.csv",
+  "beeswarm_plot": "pima_shap_beeswarm.png",
+  "bar_plot": "pima_shap_global_bar.png",
+  "limitations": [
+    "SHAP feature contributions describe this fitted model's output, not causal effects or clinical risk factors.",
+    "The binary classifier raw output is log-odds; individual SHAP values are not percentage contributions.",
+    "EHR categorical one-hot feature contributions are summed to their original feature; the beeswarm colors encode categories as integer codes documented above.",
+    "Local case identifiers are row positions because the saved processed test splits do not provide a stable patient ID."
+  ]
+}

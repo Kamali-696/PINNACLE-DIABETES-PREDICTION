@@ -1,0 +1,44 @@
+{
+  "dataset": "ehr",
+  "target": "diabetes",
+  "feature_columns": [
+    "gender",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level"
+  ],
+  "categorical_columns": [
+    "gender",
+    "smoking_history"
+  ],
+  "numerical_columns": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level"
+  ],
+  "seed": 42,
+  "split_proportions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "csv_values_are_unscaled": true,
+  "imputation_values_from_train": {
+    "age": 43.0,
+    "hypertension": 0.0,
+    "heart_disease": 0.0,
+    "bmi": 27.32,
+    "HbA1c_level": 5.8,
+    "blood_glucose_level": 140.0,
+    "gender": "Female",
+    "smoking_history": "never"
+  },
+  "note": "CSV splits preserve source units/categories and are imputed with train-only statistics. preprocessor.pkl is fitted on train only for reusable impute/encode/scale."
+}

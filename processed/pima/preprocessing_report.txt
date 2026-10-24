@@ -1,0 +1,67 @@
+DATASET INSPECTION: pima
+Shape: (768, 9)
+Columns: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+Data types:
+Pregnancies                 float64
+Glucose                     float64
+BloodPressure               float64
+SkinThickness               float64
+Insulin                     float64
+BMI                         float64
+DiabetesPedigreeFunction    float64
+Age                         float64
+Outcome                     float64
+Numerical columns: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+Categorical columns: []
+First five rows:
+ Pregnancies  Glucose  BloodPressure  SkinThickness  Insulin  BMI  DiabetesPedigreeFunction  Age  Outcome
+         6.0    148.0           72.0           35.0      0.0 33.6                     0.627 50.0      1.0
+         1.0     85.0           66.0           29.0      0.0 26.6                     0.351 31.0      0.0
+         8.0    183.0           64.0            0.0      0.0 23.3                     0.672 32.0      1.0
+         1.0     89.0           66.0           23.0     94.0 28.1                     0.167 21.0      0.0
+         0.0    137.0           40.0           35.0    168.0 43.1                     2.288 33.0      1.0
+Missing values by column:
+Pregnancies                 0
+Glucose                     0
+BloodPressure               0
+SkinThickness               0
+Insulin                     0
+BMI                         0
+DiabetesPedigreeFunction    0
+Age                         0
+Outcome                     0
+Exact duplicate rows: 0
+Target Outcome distribution:
+Outcome
+0.0    500
+1.0    268
+
+PREPROCESSING REPORT
+Original shape: (768, 9)
+Cleaned shape after exact duplicate removal: (768, 9)
+Exact duplicate rows removed: 0
+Invalid/out-of-range values converted to missing by column: {'Pregnancies': 0, 'Glucose': 5, 'BloodPressure': 35, 'SkinThickness': 227, 'Insulin': 374, 'BMI': 11, 'DiabetesPedigreeFunction': 0, 'Age': 0, 'Glucose (zero treated as missing)': 0, 'BloodPressure (zero treated as missing)': 0, 'SkinThickness (zero treated as missing)': 0, 'Insulin (zero treated as missing)': 0, 'BMI (zero treated as missing)': 0}
+Missing values after invalid/sentinel handling and before imputation: {'Pregnancies': 0, 'Glucose': 5, 'BloodPressure': 35, 'SkinThickness': 227, 'Insulin': 374, 'BMI': 11, 'DiabetesPedigreeFunction': 0, 'Age': 0}
+Missing values remaining in exported CSVs after train-only imputation: {"train": {"Pregnancies": 0, "Glucose": 0, "BloodPressure": 0, "SkinThickness": 0, "Insulin": 0, "BMI": 0, "DiabetesPedigreeFunction": 0, "Age": 0}, "validation": {"Pregnancies": 0, "Glucose": 0, "BloodPressure": 0, "SkinThickness": 0, "Insulin": 0, "BMI": 0, "DiabetesPedigreeFunction": 0, "Age": 0}, "test": {"Pregnancies": 0, "Glucose": 0, "BloodPressure": 0, "SkinThickness": 0, "Insulin": 0, "BMI": 0, "DiabetesPedigreeFunction": 0, "Age": 0}}
+Features retained: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
+Features removed: [] (target excluded from transformer inputs)
+Target retained separately as binary 0/1: Outcome
+Target distribution before cleaning: {'0.0': 500, '1.0': 268}
+Target distribution after duplicate removal/cleaning: {'0': 500, '1': 268}
+Split sizes and target distributions:
+  train: n=537, target={'0': 350, '1': 187}
+  validation: n=115, target={'0': 75, '1': 40}
+  test: n=116, target={'0': 75, '1': 41}
+
+Imputation/encoding/scaling decisions:
+- Missing numeric feature values are imputed with the training split median in preprocessor.pkl.
+- Missing categorical feature values are imputed with the training split most frequent category.
+- Categorical features are one-hot encoded with unknown categories ignored; category vocabulary is learned from training only.
+- Numeric features are standardized using training-only mean and standard deviation in preprocessor.pkl.
+- Exported split CSVs retain source feature names/categories and units, with train-only imputation values applied: {'Pregnancies': 3.0, 'Glucose': 117.0, 'BloodPressure': 72.0, 'SkinThickness': 29.0, 'Insulin': 126.0, 'BMI': 32.4, 'DiabetesPedigreeFunction': 0.385, 'Age': 30.0}.
+- The saved transformer is fitted on the unscaled training features and retains reusable imputation/encoding/scaling operations; no target is passed to it.
+- No records are removed for invalid measurements; invalid observations become missing and are imputed at transform time.
+- Exact duplicate rows are removed before splitting to reduce leakage from repeated records.
+- Pima zero values are treated as missing for Glucose, BloodPressure, SkinThickness, Insulin and BMI because zero is not a physiologically plausible measured value for these fields in this dataset.
+- Pregnancies=0 is retained as a valid value.
+- Pima screening ranges (outside -> missing): Pregnancies 0–30; Glucose 20–400; BloodPressure 20–200; SkinThickness 1–100; Insulin 1–1000; BMI 10–80; DiabetesPedigreeFunction >0 and <=10; Age 18–120.

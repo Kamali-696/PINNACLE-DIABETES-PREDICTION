@@ -1,0 +1,16 @@
+# Keep scikit-learn/XGBoost aligned with the versions that serialized the saved model bundles.
+fastapi==0.135.2
+uvicorn==0.42.0
+pydantic==2.12.5
+pydantic-settings==2.14.2
+
+# Model artifact runtime versions from local_model_results/run_20261024T003644Z/*/training_metadata.json
+xgboost==3.2.0
+scikit-learn==1.8.0
+pandas==2.3.3
+numpy==2.4.2
+joblib==1.5.3
+
+# Synchronous single-record TreeExplainer endpoints and API tests
+shap==0.50.0
+httpx==0.28.1

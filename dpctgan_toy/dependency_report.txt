@@ -1,0 +1,23 @@
+Prototype dependency and runtime report
+=======================================
+
+Python: 3.14.3
+PyTorch: 2.14.0+cpu (pre-existing system install; left unchanged)
+Opacus: 1.6.0 (installed only into dpctgan_toy/.deps)
+NumPy: 2.4.2 (pre-existing system install)
+pandas: 2.3.3 (pre-existing system install)
+SciPy: 1.17.1 (pre-existing system install)
+opt-einsum: 3.4.0 (installed only into dpctgan_toy/.deps)
+CTGAN/SDV: not installed and not required for this minimal custom CTGAN-style prototype
+torchcsprng: not installed; Opacus secure_mode is disabled for this CPU-only toy run
+
+Compatibility check: Opacus 1.6.0 requires PyTorch >=2.6 and supports Python >=3.7.5.
+The prototype ran successfully with the versions above. The first dependency install
+attempt was cancelled before installation when pip tried to stage another PyTorch
+wheel; the successful install used --no-deps into the isolated .deps directory.
+No existing project Python package was replaced.
+
+The non-secure pseudo-random mode is an experimental limitation. The prototype does
+not manually seed the RNG used for DP noise, but it does not use cryptographically
+secure randomness. This setup is not approved for patient data or a production
+privacy claim.

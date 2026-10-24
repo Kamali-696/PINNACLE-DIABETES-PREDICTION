@@ -1,0 +1,84 @@
+{
+  "ehr": {
+    "training_sample_count": 67302,
+    "training_class_counts": {
+      "0": 61365,
+      "1": 5937
+    },
+    "scale_pos_weight": 10.336028297119757,
+    "feature_mapping": {
+      "age_years_scaled": {
+        "source_column": "age",
+        "unit": "years",
+        "transformation": "value / 100.0"
+      },
+      "bmi_kg_m2_scaled": {
+        "source_column": "bmi",
+        "unit": "kg/m^2",
+        "transformation": "value / 100.0"
+      }
+    },
+    "local_lr_threshold": 0.6104226278451331,
+    "local_lr_threshold_selection": {
+      "method": "maximize validation F1; ties select threshold closest to 0.5",
+      "validation_best_f1": 0.3412762520193861,
+      "candidate_threshold_count": 10632
+    },
+    "local_lr_validation_metrics": {
+      "sample_count": 14422,
+      "threshold": 0.6104226278451331,
+      "accuracy": 0.7738177783941201,
+      "precision": 0.22968197879858657,
+      "recall": 0.6637863315003928,
+      "f1": 0.3412762520193861,
+      "roc_auc": 0.8071353847140965,
+      "confusion_matrix": {
+        "tn": 10315,
+        "fp": 2834,
+        "fn": 428,
+        "tp": 845
+      }
+    }
+  },
+  "pima": {
+    "training_sample_count": 537,
+    "training_class_counts": {
+      "0": 350,
+      "1": 187
+    },
+    "scale_pos_weight": 1.8716577540106951,
+    "feature_mapping": {
+      "age_years_scaled": {
+        "source_column": "Age",
+        "unit": "years",
+        "transformation": "value / 100.0"
+      },
+      "bmi_kg_m2_scaled": {
+        "source_column": "BMI",
+        "unit": "kg/m^2",
+        "transformation": "value / 100.0"
+      }
+    },
+    "local_lr_threshold": 0.4111283741754974,
+    "local_lr_threshold_selection": {
+      "method": "maximize validation F1; ties select threshold closest to 0.5",
+      "validation_best_f1": 0.6722689075630253,
+      "candidate_threshold_count": 115
+    },
+    "local_lr_validation_metrics": {
+      "sample_count": 115,
+      "threshold": 0.4111283741754974,
+      "accuracy": 0.6608695652173913,
+      "precision": 0.5063291139240507,
+      "recall": 1.0,
+      "f1": 0.6722689075630253,
+      "roc_auc": 0.754,
+      "confusion_matrix": {
+        "tn": 36,
+        "fp": 39,
+        "fn": 0,
+        "tp": 40
+      }
+    }
+  }
+}

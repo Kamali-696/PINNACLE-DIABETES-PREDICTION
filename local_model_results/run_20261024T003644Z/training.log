@@ -1,0 +1,45 @@
+Local XGBoost training run: D:\PINNACLE_DIABETES_PREDICTION\local_model_results\run_20261024T003644Z
+Runtime versions: {"joblib": "1.5.3", "numpy": "2.4.2", "pandas": "2.3.3", "python": "3.14.3", "scikit_learn": "1.8.0", "xgboost": "3.2.0"}
+
+=== EHR ===
+Training status: SUCCESS
+Training samples: 67302
+Training classes: negative=61365 positive=5937
+scale_pos_weight: 10.33602830
+Selected threshold: 0.871002 (maximize validation F1; ties choose threshold closest to 0.5)
+Test metrics: accuracy=0.9712 precision=0.9385 recall=0.7201 F1=0.8149 ROC-AUC=0.9791
+Confusion matrix [ [TN, FP], [FN, TP] ]: [[13090, 60], [356, 916]]
+Test classification report:
+              precision    recall  f1-score   support
+
+negative (0)       0.97      1.00      0.98     13150
+positive (1)       0.94      0.72      0.81      1272
+
+    accuracy                           0.97     14422
+   macro avg       0.96      0.86      0.90     14422
+weighted avg       0.97      0.97      0.97     14422
+
+
+=== PIMA ===
+Training status: SUCCESS
+Training samples: 537
+Training classes: negative=350 positive=187
+scale_pos_weight: 1.87165775
+Selected threshold: 0.270872 (maximize validation F1; ties choose threshold closest to 0.5)
+Test metrics: accuracy=0.7069 precision=0.5574 recall=0.8293 F1=0.6667 ROC-AUC=0.8338
+Confusion matrix [ [TN, FP], [FN, TP] ]: [[48, 27], [7, 34]]
+Test classification report:
+              precision    recall  f1-score   support
+
+negative (0)       0.87      0.64      0.74        75
+positive (1)       0.56      0.83      0.67        41
+
+    accuracy                           0.71       116
+   macro avg       0.72      0.73      0.70       116
+weighted avg       0.76      0.71      0.71       116
+
+
+=== EHR vs PIMA TEST COMPARISON ===
+EHR: accuracy=0.9712 precision=0.9385 recall=0.7201 F1=0.8149 ROC-AUC=0.9791 confusion={'tn': 13090, 'fp': 60, 'fn': 356, 'tp': 916}
+PIMA: accuracy=0.7069 precision=0.5574 recall=0.8293 F1=0.6667 ROC-AUC=0.8338 confusion={'tn': 48, 'fp': 27, 'fn': 7, 'tp': 34}
+Results saved to: D:\PINNACLE_DIABETES_PREDICTION\local_model_results\run_20261024T003644Z

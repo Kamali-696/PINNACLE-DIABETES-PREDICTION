@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.streamlit-venv/
+.uv-cache/
+.tmp/
+.env
+
+# Dataset (download separately; see README)
+dataset/
+
+# Trained model binaries (regenerate with `python -m training.train_xgboost`).
+# The small metadata/evaluation JSON files are kept so the reported metrics stay reviewable.
+backend/model_artifacts/**/*.joblib
+backend/model_artifacts/**/*.pkl
+backend/model_artifacts/**/*.pt
+backend/model_artifacts/**/*.pth
+backend/model_artifacts/**/*.ubj
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

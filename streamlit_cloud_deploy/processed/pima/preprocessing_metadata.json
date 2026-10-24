@@ -1,0 +1,43 @@
+{
+  "dataset": "pima",
+  "target": "Outcome",
+  "feature_columns": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "categorical_columns": [],
+  "numerical_columns": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age"
+  ],
+  "seed": 42,
+  "split_proportions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "csv_values_are_unscaled": true,
+  "imputation_values_from_train": {
+    "Pregnancies": 3.0,
+    "Glucose": 117.0,
+    "BloodPressure": 72.0,
+    "SkinThickness": 29.0,
+    "Insulin": 126.0,
+    "BMI": 32.4,
+    "DiabetesPedigreeFunction": 0.385,
+    "Age": 30.0
+  },
+  "note": "CSV splits preserve source units/categories and are imputed with train-only statistics. preprocessor.pkl is fitted on train only for reusable impute/encode/scale."
+}

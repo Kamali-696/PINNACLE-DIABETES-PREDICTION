@@ -1,0 +1,21 @@
+DP-CTGAN-style toy privacy accounting report
+=============================================
+Status: PARTIALLY VERIFIED
+Data: fabricated toy rows only; no project datasets accessed
+Privacy unit: one toy row (record-level adjacency)
+Mechanism: Opacus 1.6.0 DP-SGD on real-record discriminator updates;
+generator and fake-only discriminator steps are post-processing
+Accountant: Opacus RDP, measured after training
+Measured epsilon: 5.796335380637
+Configured delta: 1e-05
+Noise multiplier: 1.2
+Per-record clipping norm: 1.0
+Sampling: Poisson via Opacus DPDataLoader
+Actual sampling rate per private update: 0.125
+Private updates executed: 64
+Accountant updates: 64
+Accountant events (noise multiplier, sample rate, count): [(1.2, 0.125, 64)]
+Preprocessing: fixed bounds/category vocabulary only; no learned
+statistics, category frequencies, imputers, or conditional frequencies
+Limitations: secure_mode=False (non-cryptographic RNG); toy rows only;
+record-level only; not a medical or production privacy claim
